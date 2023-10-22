@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images slider</title>
+    <style>
+        .slider{
+            margin:50px auto;
+            width:50%;
+        }
+
+        .img-box img{
+            width: 100%;
+        }
+
+        .btn{
+            border: none;
+            outline: none;
+            background: #888;
+            padding: 10px 30px;
+            font-size: 20px;
+            color: #ddd;
+            cursor: pointer;
+            margin: 10px auto;
+        }
+
+        .btn:hover{
+            background: black;
+        }
+
+        body{
+            background:linear-gradient(45deg,#090d09,#181d1a,#1e2622,#637b77,#2e3b35,#171c19,#090d09);
+            background-size: 300% 300%;
+            animation: color 12s ease-in-out infinite;
+        }
+        @keyframes color{
+        0%{
+           background-position: 0 50%;
+        }
+        50%{
+            background-position: 100% 50%;
+        }
+        100%{
+             background-position: 0 50%;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="img-box">
+            <img src="images/A.jpg" alt="gate" class="slider-img" width="auto" height="auto">
+        </div>
+        <button class="btn" onclick="prev()">Prev</button>
+        <button class="btn" onclick="next()">Next</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
